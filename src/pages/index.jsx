@@ -5,7 +5,7 @@ import {
 
 import { Home } from "./Home";
 import Search from "./Search";
-//import Produto from "./Produto";
+import Team from "./Team";
 //import GuiaMedidas from "./GuiaMedidas";
 
 const router = createBrowserRouter([
@@ -19,12 +19,12 @@ const router = createBrowserRouter([
         element: <Search />,
     },
 
-    /*{
-        path: "/produto/:id",
-        element: <Produto />,
+    {
+        path: "/team/:id",
+        element: <Team />,
     },
 
-    {
+    /*{
         path: "/guia-de-medidas",
         element: <GuiaMedidas />,
     },*/

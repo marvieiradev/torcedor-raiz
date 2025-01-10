@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import leagues from '../../data/leagues.js';
+import { Link } from 'react-router';
+
 const Search = () => {
     const [teams, setTeams] = useState([])
     const params = useParams();
@@ -26,11 +28,14 @@ const Search = () => {
             {
                 teams.map((t) => {
                     return <div key={t.strTeam}>
-                        <h1>{t.strTeam}</h1>
-                        <img src={t.strBadge} className="w-[200px]" alt="" />
+                        <Link to={`/team/${t.strTeam}`}>
+                            <h1>{t.strTeam}</h1>
+                            <img src={t.strBadge} className="w-[200px]" alt="" />
+                        </Link>
                     </div>
                 })
             }
+            {console.log(teams.strTeam)}
 
         </>
     );
