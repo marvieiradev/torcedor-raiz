@@ -11,5 +11,12 @@
 }
 
 html {
-  background-color: #d4fde9;
+  background-color: #040404;
+}
+
+.bg-team {
+  background-image: url("../../bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }

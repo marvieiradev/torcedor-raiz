@@ -16,10 +16,10 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#228B22",
+          DEFAULT: "#0B0E0F",
           foreground: "hsl(var(--primary-foreground))",
         },
-        bgprimary: "#f9fafb",
+        bgprimary: "#171C1F",
         dark: "#030712",
         whatsapp: "#35c150",
         cyan: "#02ceff",
