@@ -6,6 +6,7 @@ import {
 import { Home } from "./Home";
 import Search from "./Search";
 import Team from "./Team";
+import Load from "./Load";
 //import GuiaMedidas from "./GuiaMedidas";
 
 const router = createBrowserRouter([
@@ -20,8 +21,13 @@ const router = createBrowserRouter([
     },
 
     {
-        path: "/team/:id",
+        path: "/team/:id/:name",
         element: <Team />,
+    },
+
+    {
+        path: "/load/:id",
+        element: <Load />,
     },
 
     /*{
