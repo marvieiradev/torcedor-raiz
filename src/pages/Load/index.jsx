@@ -27,7 +27,7 @@ const Load = () => {
     if (teamId !== null) {
         navigate("/team/" + teamId + "/" + team)
     }
-    return (<>Load</>);
+    return (<></>);
 }
 
 export default Load;
