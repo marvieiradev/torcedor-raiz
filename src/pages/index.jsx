@@ -7,6 +7,7 @@ import { Home } from "./Home";
 import Search from "./Search";
 import Team from "./Team";
 import Load from "./Load";
+import MyTeam from "./MyTeam";
 //import GuiaMedidas from "./GuiaMedidas";
 
 const router = createBrowserRouter([
@@ -30,10 +31,10 @@ const router = createBrowserRouter([
         element: <Load />,
     },
 
-    /*{
-        path: "/guia-de-medidas",
-        element: <GuiaMedidas />,
-    },*/
+    {
+        path: "/myteam",
+        element: <MyTeam />,
+    },
 ]);
 
 export const Router = () => (
