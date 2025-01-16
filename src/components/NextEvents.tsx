@@ -18,11 +18,6 @@ const NextEvents = ({ id }) => {
 
   return (
     <>
-      <div className="mb-2">
-        <p className="text-lg font-semibold text-center text-white mt-4 mb-2">
-          Próximos Jogos
-        </p>
-      </div>
       <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3">
         {nextEvents.map(
           (item, index) =>
