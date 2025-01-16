@@ -4,6 +4,7 @@ import NextEvents from "../../components/NextEvents";
 import React from "react";
 import LastEvents from "../../components/LastEvents";
 import Header from "../../components/Header";
+import { searchTeams } from "../../data/config";
 
 const Team = () => {
   const [teamName, setTeamName] = useState("");
@@ -21,11 +22,9 @@ const Team = () => {
   const id = params.id;
   const name = params.name;
 
-  let url =
-    "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=" + name;
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetch(url);
+      const result = await fetch(searchTeams + name);
       result
         .json()
         .then((json) => {
@@ -93,17 +92,15 @@ const Team = () => {
           </p>
           <div className="text-white text-base py-2 px-4 flex flex-col justify-center md:flex-row md:justify-around mditems-center md:text-lg">
             <div>
-              <p>{`Nome: ${teamName} ${
-                teamShortName ? "(" + teamShortName + ")" : ""
-              }`}</p>
+              <p>{`Nome: ${teamName} ${teamShortName ? "(" + teamShortName + ")" : ""
+                }`}</p>
               <p>{`Ano de Formação: ${teamYear ? teamYear : "Sem dados"}`}</p>
               <p>{`País: ${teamCountry ? teamCountry : "Sem dados"}`}</p>
               <p>{`Estádio: ${teamStadium ? teamStadium : "Sem dados"}`}</p>
-              <p>{`Localização: ${
-                teamLocation ? teamLocation : "Sem dados"
-              }`}</p>
+              <p>{`Localização: ${teamLocation ? teamLocation : "Sem dados"
+                }`}</p>
             </div>
-            <div className="justify-center flex">
+            <div className="justify-center flex mt-2 md:mt-0">
               <img
                 src={teamLogo}
                 alt=""

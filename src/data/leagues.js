@@ -96,6 +96,15 @@ const leagues = [
     country:
       "https://www.thesportsdb.com/images/icons/flags/shiny/32/Argentina.png",
   },
+
+  {
+    id: 12,
+    title: "Primeira Liga Mexicana",
+    img: "https://www.thesportsdb.com/images/media/league/badge/mav5rx1686157960.png/small",
+    name: "Mexican Primera League",
+    country:
+      "https://www.thesportsdb.com/images/icons/flags/shiny/32/Mexico.png",
+  },
 ];
 
 export default leagues;

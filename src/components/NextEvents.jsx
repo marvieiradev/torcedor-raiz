@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { imageTeam } from "../data/config";
+import { imageTeam, imageTournament, searchEvents } from "../data/config";
 
 const NextEvents = ({ id }) => {
   const [nextEvents, setNextEvents] = useState([]);
 
   useEffect(() => {
     const getNextEvents = async () => {
-      const schedule = await fetch(
-        "https://api.sofascore.com/api/v1/team/" + id + "/events/next/0"
-      );
+      const schedule = await fetch(searchEvents + id + "/events/next/0");
       schedule.json().then((json) => {
         setNextEvents(json.events);
       });
@@ -28,11 +26,7 @@ const NextEvents = ({ id }) => {
               >
                 <div className="flex gap-2 justify-center p-1">
                   <img
-                    src={
-                      "https://img.sofascore.com/api/v1/unique-tournament/" +
-                      item.tournament.uniqueTournament.id +
-                      "/image/dark"
-                    }
+                    src={imageTournament + item.tournament.uniqueTournament.id + "/image/dark"}
                     alt=""
                     className="h-[25px]"
                   />

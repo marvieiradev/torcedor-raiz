@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import leagues from '../../data/leagues.js';
 import { Link } from 'react-router';
 import Header from '../../components/Header.jsx';
+import { listTeamsByLeague } from '../../data/config.js';
 
 const Search = () => {
     const [teams, setTeams] = useState([])
@@ -11,11 +12,9 @@ const Search = () => {
         return league.id == params.id;
     });
 
-    let url = "https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=" + search.name
-
     useEffect(() => {
         const fetchData = async () => {
-            const result = await fetch(url)
+            const result = await fetch(listTeamsByLeague + search.name)
             result.json().then(json => {
                 setTeams(json.teams)
             }).catch((error) => console.log(error));
