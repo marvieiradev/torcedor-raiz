@@ -2,19 +2,20 @@ import { useNavigate } from "react-router-dom";
 import { Search, HeartOff } from "lucide-react";
 const HeaderMyTeam = () => {
     const navigate = useNavigate();
-    const handleNavigate = () => {
-        navigate("/");
+
+    const handleSearch = () => {
+        navigate("/home");
     };
 
     const handleClear = () => {
-        localStorage.clear();
+        localStorage.removeItem("teamId");
         navigate("/")
     };
     return (
         <>
             <div className="sticky top-0 z-50 border-b border-solid border-bgprimary w-full p-3 bg-gray-800 max-w-[1280px]">
                 <div className="flex flex-row justify-between w-full px-4 items-center">
-                    <div className="flex flex-col items-center cursor-pointer text-white" onClick={handleNavigate}>
+                    <div className="flex flex-col items-center cursor-pointer text-white" onClick={handleSearch}>
                         <Search />
                         <p className="text-xs">Buscar</p>
                     </div>

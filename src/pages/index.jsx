@@ -8,11 +8,16 @@ import Search from "./Search";
 import Team from "./Team";
 import Load from "./Load";
 import MyTeam from "./MyTeam";
-//import GuiaMedidas from "./GuiaMedidas";
+import Start from "./Start";
 
 const router = createBrowserRouter([
     {
         path: "/",
+        element: <Start />,
+    },
+
+    {
+        path: "/home",
         element: <Home />,
     },
 
