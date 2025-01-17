@@ -23,7 +23,7 @@ const HeaderMyTeam = () => {
                     <p className="text-xs">Buscar</p>
                 </div>
                 <div className="justify-center">
-                    <img src="/logo.svg" alt="Torcedor Raiz" className="h-[25px]" />
+                    <img src="/logo.svg" alt="Torcedor Raiz" className="h-[22px]" />
                 </div>
                 <div
                     className="flex flex-col items-center cursor-pointer text-white"
