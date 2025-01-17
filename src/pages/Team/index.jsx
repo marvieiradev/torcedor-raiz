@@ -3,8 +3,8 @@ import { useParams } from "react-router";
 import NextEvents from "../../components/NextEvents";
 import React from "react";
 import LastEvents from "../../components/LastEvents";
-import Header from "../../components/Header";
 import { searchTeams } from "../../data/config";
+import HeaderCommon from "../../components/HeaderCommon";
 
 const Team = () => {
   const [teamName, setTeamName] = useState("");
@@ -56,7 +56,7 @@ const Team = () => {
   return (
     <div className="container">
       <div className="flex flex-col flex-1 min-h-screen items-center">
-        <Header fav="" id={id} />
+        <HeaderCommon fav="" id={id} />
         <div className="flex flex-col justify-center w-full max-w-[1280px]">
           <div
             className="flex h-[50px] justify-center items-center"

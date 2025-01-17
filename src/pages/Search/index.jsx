@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import leagues from '../../data/leagues.js';
 import { Link } from 'react-router';
-import Header from '../../components/Header.jsx';
 import { listTeamsByLeague } from '../../data/config.js';
+import HeaderCommon from '../../components/HeaderCommon.jsx';
 
 const Search = () => {
     const [teams, setTeams] = useState([])
@@ -26,7 +26,7 @@ const Search = () => {
     return (
         <div className="container">
             <div className="flex flex-col flex-1 min-h-screen items-center">
-                <Header fav={"hidden"} />
+                <HeaderCommon fav="hidden" />
                 <div className="flex flex-col justify-center w-full max-w-[1280px]">
                     <h1 className="uppercase text-xl lg:text-2xl text-center font-bold text-white mt-2 mb-4 lg:mb-6">
                         ESCOLHA SEU TIME

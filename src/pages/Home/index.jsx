@@ -1,4 +1,4 @@
-import Header from "../../components/Header.jsx";
+import HeaderCommon from "../../components/HeaderCommon.jsx";
 import leagues from "../../data/leagues.js";
 import { Link } from "react-router-dom";
 
@@ -6,7 +6,7 @@ export function Home() {
     return (
         <div className="container">
             <div className="flex flex-col flex-1 min-h-screen items-center">
-                <Header fav={"hidden"} />
+                <HeaderCommon fav={"hidden"} />
                 <div className="flex flex-col justify-center w-full max-w-[1280px]">
                     <h1 className="uppercase text-xl lg:text-2xl text-center font-bold text-white mt-2 mb-4 lg:mb-6">
                         ESCOLHA UMA LIGA / PAÍS

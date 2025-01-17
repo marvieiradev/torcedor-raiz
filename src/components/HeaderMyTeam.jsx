@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Search, HeartOff } from "lucide-react";
+import Header from "./Header";
 const HeaderMyTeam = () => {
     const navigate = useNavigate();
 
@@ -9,27 +10,31 @@ const HeaderMyTeam = () => {
 
     const handleClear = () => {
         localStorage.removeItem("teamId");
-        navigate("/")
+        navigate("/");
     };
     return (
         <>
-            <div className="sticky top-0 z-50 border-b border-solid border-bgprimary w-full p-3 bg-gray-800 max-w-[1280px]">
-                <div className="flex flex-row justify-between w-full px-4 items-center">
-                    <div className="flex flex-col items-center cursor-pointer text-white" onClick={handleSearch}>
-                        <Search />
-                        <p className="text-xs">Buscar</p>
-                    </div>
-                    <div className="justify-center">
-                        <p className="text-center text-xl text-white">Torcedor <span className="font-bold text-green-600">Raiz</span></p>
-                    </div>
-                    <div className="flex flex-col items-center cursor-pointer text-white" onClick={handleClear}>
-                        <HeartOff />
-                        <p className="text-xs">Remover</p>
-                    </div>
+            <Header>
+                <div
+                    className="flex flex-col items-center cursor-pointer text-white"
+                    onClick={handleSearch}
+                >
+                    <Search />
+                    <p className="text-xs">Buscar</p>
                 </div>
-            </div>
+                <div className="justify-center">
+                    <img src="/logo.svg" alt="Torcedor Raiz" className="h-[25px]" />
+                </div>
+                <div
+                    className="flex flex-col items-center cursor-pointer text-white"
+                    onClick={handleClear}
+                >
+                    <HeartOff />
+                    <p className="text-xs">Remover</p>
+                </div>
+            </Header>
         </>
     );
-}
+};
 
 export default HeaderMyTeam;
