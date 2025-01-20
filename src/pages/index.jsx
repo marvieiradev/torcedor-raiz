@@ -9,6 +9,7 @@ import Team from "./Team";
 import Load from "./Load";
 import MyTeam from "./MyTeam";
 import Start from "./Start";
+import NotFound from "./NotFound";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
     {
         path: "/myteam",
         element: <MyTeam />,
+    },
+
+    {
+        path: "*",
+        element: <NotFound />,
     },
 ]);
 
