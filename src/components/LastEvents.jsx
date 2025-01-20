@@ -32,7 +32,7 @@ const LastEvents = ({ id }) => {
                                     />
                                     <p>{item.tournament.name}</p>
                                 </div>
-                                <div className="flex justify-between bg-black p-2 font-semibold items-center mb-2 w-[100%] rounded-xl">
+                                <div className="flex justify-between bg-black p-2 font-semibold text-xs lg:text-base items-center mb-2 w-[100%] rounded-xl">
                                     <div className="flex flex-col w-[50%] px-2 gap-2 items-center">
                                         <img
                                             src={imageTeam + item.homeTeam.id + "/image"}
@@ -42,9 +42,9 @@ const LastEvents = ({ id }) => {
                                         <p className="truncate">{item.homeTeam.shortName}</p>
                                     </div>
                                     <div className="flex gap-6 justify-center items-center">
-                                        <p className="text-center items-center text-yellow-500 text-3xl">{item.homeScore.display}</p>
+                                        <p className="text-center items-center text-yellow-500 text-2xl">{item.homeScore.display}</p>
                                         <p className="text-center items-center justify-center text-xl">X</p>
-                                        <p className="text-center items-center text-yellow-500 text-3xl">{item.awayScore.display}</p>
+                                        <p className="text-center items-center text-yellow-500 text-2xl">{item.awayScore.display}</p>
                                     </div>
                                     <div className="flex flex-col w-[50%] px-2 gap-2 items-center">
                                         <img
