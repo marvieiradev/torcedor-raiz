@@ -2,16 +2,20 @@ import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Heart } from "lucide-react";
 import Header from "./Header";
 
-const HeaderCommon = ({ fav, id }) => {
+const HeaderCommon = ({ fav, team }) => {
     const navigate = useNavigate();
     const handleNavigate = () => {
         navigate("/myteam");
     };
 
     const handleFavorite = () => {
-        localStorage.setItem("teamId", id);
+        var saveTeam = JSON.stringify(team);
+        console.log(saveTeam)
+        localStorage.setItem("team", saveTeam);
         navigate("/myteam");
     };
+
+
 
     return (
         <>

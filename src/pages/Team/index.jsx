@@ -53,10 +53,12 @@ const Team = () => {
     setTeamColor2("#000");
   }
 
+  var team = { id: id, color1: teamColor1, color2: teamColor2 }
+
   return (
     <div className="container">
       <div className="flex flex-col flex-1 min-h-screen items-center">
-        <HeaderCommon fav="" id={id} />
+        <HeaderCommon fav="" team={team} />
         <div className="flex flex-col justify-center w-full max-w-[1280px]">
           <div
             className="flex h-[50px] justify-center items-center"
