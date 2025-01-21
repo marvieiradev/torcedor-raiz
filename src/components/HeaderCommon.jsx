@@ -19,7 +19,7 @@ const HeaderCommon = ({ fav, team }) => {
         <>
             <Header>
                 <div
-                    className="flex flex-col items-center cursor-pointer text-string"
+                    className="flex flex-col justify-center items-center cursor-pointer text-string"
                     onClick={handleNavigate}
                 >
                     <ArrowLeft />
@@ -29,7 +29,7 @@ const HeaderCommon = ({ fav, team }) => {
                     <img src="/logo.svg" alt="Torcedor Raiz" className="h-[22px]" />
                 </div>
                 <div
-                    className="flex flex-col items-center cursor-pointer text-string min-w-[20px]"
+                    className="flex flex-col justify-center items-center cursor-pointer text-string min-w-[20px]"
                     onClick={handleFavorite}
                 >
                     <div className={fav}>
