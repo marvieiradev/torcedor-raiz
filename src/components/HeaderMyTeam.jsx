@@ -16,7 +16,7 @@ const HeaderMyTeam = () => {
         <>
             <Header>
                 <div
-                    className="flex flex-col items-center cursor-pointer text-white"
+                    className="flex flex-col items-center cursor-pointer text-string"
                     onClick={handleSearch}
                 >
                     <Search />
@@ -26,7 +26,7 @@ const HeaderMyTeam = () => {
                     <img src="/logo.svg" alt="Torcedor Raiz" className="h-[22px]" />
                 </div>
                 <div
-                    className="flex flex-col items-center cursor-pointer text-white"
+                    className="flex flex-col items-center cursor-pointer text-string"
                     onClick={handleClear}
                 >
                     <HeartOff />

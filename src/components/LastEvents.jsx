@@ -21,7 +21,7 @@ const LastEvents = ({ id }) => {
                     (item, index) =>
                         index < 3 && (
                             <div
-                                className="mb-4 bg-gray-800 px-4 mx-4 text-white rounded-xl"
+                                className="mb-4 bg-card px-4 mx-4 text-string rounded-xl"
                                 key={index}
                             >
                                 <div className="flex gap-2 justify-center p-1">
@@ -42,9 +42,9 @@ const LastEvents = ({ id }) => {
                                         <p className="truncate">{item.homeTeam.shortName}</p>
                                     </div>
                                     <div className="flex gap-6 justify-center items-center">
-                                        <p className="text-center items-center text-yellow-500 text-2xl">{item.homeScore.display}</p>
+                                        <p className="text-center items-center text-string_accent text-2xl">{item.homeScore.display}</p>
                                         <p className="text-center items-center justify-center text-xl">X</p>
-                                        <p className="text-center items-center text-yellow-500 text-2xl">{item.awayScore.display}</p>
+                                        <p className="text-center items-center text-string_accent text-2xl">{item.awayScore.display}</p>
                                     </div>
                                     <div className="flex flex-col w-[50%] px-2 gap-2 items-center">
                                         <img

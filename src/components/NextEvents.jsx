@@ -21,7 +21,7 @@ const NextEvents = ({ id }) => {
           (item, index) =>
             index < 3 && (
               <div
-                className="mb-4 bg-gray-800 px-4 mx-4 text-white rounded-xl lg:grid lg:grid-2"
+                className="mb-4 bg-card px-4 mx-4 text-string rounded-xl lg:grid lg:grid-2"
                 key={index}
               >
                 <div className="flex gap-2 justify-center p-1">

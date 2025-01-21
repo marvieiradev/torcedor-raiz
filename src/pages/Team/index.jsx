@@ -89,10 +89,10 @@ const Team = () => {
               )}
             </div>
           </div>
-          <p className="text-lg font-semibold text-center text-white mt-4 mb-2">
+          <p className="text-lg font-semibold text-center text-string mt-4 mb-2">
             Informações
           </p>
-          <div className="text-white text-base py-2 px-4 flex flex-col justify-center md:flex-row md:justify-around mditems-center md:text-lg">
+          <div className="text-string text-base py-2 px-4 flex flex-col justify-center md:flex-row md:justify-around mditems-center md:text-lg">
             <div>
               <p>{`Nome: ${teamName} ${teamShortName ? "(" + teamShortName + ")" : ""
                 }`}</p>
@@ -110,11 +110,11 @@ const Team = () => {
               />
             </div>
           </div>
-          <p className="text-lg font-semibold text-center text-white mt-4 mb-4">
+          <p className="text-lg font-semibold text-center text-string mt-4 mb-4">
             Próximos Jogos
           </p>
           {id && <NextEvents id={id} />}
-          <p className="text-lg font-semibold text-center text-white mt-4 mb-4">
+          <p className="text-lg font-semibold text-center text-string mt-4 mb-4">
             Últimas Partidas
           </p>
           {id && <LastEvents id={id} />}

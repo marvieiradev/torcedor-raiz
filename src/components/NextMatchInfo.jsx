@@ -55,7 +55,7 @@ const NextMatchInfo = ({ results, name }) => {
     return (
         <>
             <div>
-                <div className="bg-gray-800 px-4 mx-4 text-white rounded-xl lg:grid lg:grid-2">
+                <div className="bg-card px-4 mx-4 text-string rounded-xl lg:grid lg:grid-2">
                     <div className="flex gap-2 justify-center p-1">
                         <p className="text-lg font-semibold">Últimos Resultados</p>
                     </div>
@@ -86,11 +86,11 @@ const NextMatchInfo = ({ results, name }) => {
                         )}
                     </div>
                     <div className="flex gap-4 justify-center">
-                        <p className="text-white text-sm">{`VIT: ${win}`}</p>
-                        <p className="text-white text-sm">{`EMP: ${draw}`}</p>
-                        <p className="text-white text-sm">{`DER: ${lost}`}</p>
+                        <p className="text-string text-sm">{`VIT: ${win}`}</p>
+                        <p className="text-string text-sm">{`EMP: ${draw}`}</p>
+                        <p className="text-string text-sm">{`DER: ${lost}`}</p>
                         {results.length >= 5 && (
-                            <p className="text-white text-sm">{`APROV: ${(
+                            <p className="text-string text-sm">{`APROV: ${(
                                 (teamAvg / 3) *
                                 100
                             ).toFixed(0)}%`}</p>
@@ -100,7 +100,7 @@ const NextMatchInfo = ({ results, name }) => {
                 </div>
                 <div className="px-4 py-2">
                     {results.length >= 5 && (
-                        <p className="text-yellow-400 font-semibold text-center text-sm lg:text-base">{report}</p>
+                        <p className="text-string_accent font-semibold text-center text-sm lg:text-base">{report}</p>
                     )}
                 </div>
             </div>

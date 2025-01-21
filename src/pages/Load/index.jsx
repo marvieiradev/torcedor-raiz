@@ -27,7 +27,11 @@ const Load = () => {
     if (teamId !== null) {
         navigate("/team/" + teamId + "/" + team)
     }
-    return (<></>);
+    return (
+        <div className="flex flex-col gap-4 p-8 h-screen justify-center items-center">
+            <p className="text-string text-xl lg:text-2xl text-cente font-semibold">Carregando...</p>
+        </div>
+    );
 }
 
 export default Load;

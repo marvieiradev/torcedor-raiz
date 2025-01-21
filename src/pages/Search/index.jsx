@@ -28,7 +28,7 @@ const Search = () => {
             <div className="flex flex-col flex-1 min-h-screen items-center">
                 <HeaderCommon fav="hidden" />
                 <div className="flex flex-col justify-center w-full max-w-[1280px]">
-                    <h1 className="uppercase text-xl lg:text-2xl text-center font-bold text-white mt-2 mb-4 lg:mb-6">
+                    <h1 className="uppercase text-xl lg:text-2xl text-center font-bold text-string mt-2 mb-4 lg:mb-6">
                         ESCOLHA SEU TIME
                     </h1>
                     <div className="grid grid-cols-2 gap-x-3 gap-y-3 xs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 lg:gap-5 px-4 mb-6 place-items-center">
@@ -45,10 +45,10 @@ const Search = () => {
                                             loading="lazy"
                                             className="flex aspect-square h-[40%] w-[100%] justify-center rounded-lg object-contain"
                                         />
-                                        <p className="uppercase line-clamp-2 h-9 overflow-hidden text-ellipsis text-xs md:text-sm lg:text-md text-center font-semibold text-white mt-2 mb-2 leading-2">
+                                        <p className="uppercase line-clamp-2 h-9 overflow-hidden text-ellipsis text-xs md:text-sm lg:text-md text-center font-semibold text-string mt-2 mb-2 leading-2">
                                             {t.strTeam}
                                         </p>
-                                        <div className="bg-gray-800 text-white text-center p-2 font-semibold rounded-xl w-full text-sm hover:scale-[103%]">
+                                        <div className="bg-card text-string text-center p-2 font-semibold rounded-xl w-full text-sm hover:scale-[103%]">
                                             SELECIONAR
                                         </div>
                                     </Link>
