@@ -8,7 +8,7 @@ export function Home() {
             <div className="flex flex-col flex-1 min-h-screen items-center">
                 <HeaderCommon fav={"hidden"} />
                 <div className="flex flex-col justify-center w-full max-w-[1280px]">
-                    <h1 className="text-xl lg:text-2xl text-center font-semibold text-string mt-2 mb-4 lg:mb-20 lg:mt-4">
+                    <h1 className="text-xl lg:text-2xl text-center font-semibold text-string mt-2 mb-4 lg:mb-10 lg:mt-4">
                         Selecione um país ou liga
                     </h1>
                     <div className="grid grid-cols-2 gap-x-3 gap-y-3 xs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 lg:gap-5 px-4 place-items-center">
@@ -16,7 +16,7 @@ export function Home() {
                             leagues.map((l) => (
                                 <div
                                     key={l.name}
-                                    className="flex flex-col bg-primary border-2 border-bgprimary rounded-xl p-2 items-center gap-2 shadow-xs w-[165px] h-[155px] hover:shadow-lg place-items-center relative lg:mb-4"
+                                    className="flex flex-col bg-primary border-2 border-bgprimary rounded-xl p-2 items-center gap-2 shadow-xs w-[165px] h-[155px] hover:shadow-lg place-items-center relative lg:mb-4 cursor-pointer hover:scale-105"
                                 >
                                     <Link to={`/search/${l.id}`}>
                                         <img src={l.img}

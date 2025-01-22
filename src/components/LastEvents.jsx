@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { imageTeam, imageTournament, searchEvents } from "../data/config";
 
-const LastEvents = ({ id }) => {
+const LastEvents = ({ id, size, style }) => {
     const [lastEvents, setLastEvents] = useState([]);
 
     useEffect(() => {
@@ -16,10 +16,10 @@ const LastEvents = ({ id }) => {
 
     return (
         <>
-            <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3">
+            <div className={`flex flex-col ${style}`}>
                 {lastEvents.map(
                     (item, index) =>
-                        index < 3 && (
+                        index < size && (
                             <div
                                 className="mb-4 bg-card px-4 mx-4 text-string rounded-xl"
                                 key={index}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { findTeamByName } from "../data/config";
 import { useNavigate } from "react-router";
 import React from "react";
 
@@ -9,9 +9,7 @@ const TeamFetch = (team) => {
 
     useEffect(() => {
         const getSchedule = async () => {
-            const schedule = await fetch(
-                "https://api.sofascore.com/api/v1/search/all?q=" + team.team
-            );
+            const schedule = await fetch(findTeamByName + team.team);
             schedule
                 .json()
                 .then((json) => {
@@ -23,12 +21,9 @@ const TeamFetch = (team) => {
     }, []);
 
     if (teamId !== null) {
-        navigate("/team/" + teamId + "/" + team.team)
+        navigate("/team/" + teamId + "/" + team.team);
     }
-    return (
-        <>
-        </>
-    );
-}
+    return <></>;
+};
 
 export default TeamFetch;

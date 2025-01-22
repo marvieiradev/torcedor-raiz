@@ -14,6 +14,7 @@ const MyTeam = () => {
     const [teamColor1, setTeamColor1] = useState("");
     const [teamColor2, setTeamColor2] = useState("");
     const [teamName, setTeamName] = useState("");
+    const classStyle = "md:grid md:grid-cols-2 lg:grid-cols-3"
 
     const navigate = useNavigate();
     useEffect(() => {
@@ -58,11 +59,11 @@ const MyTeam = () => {
                         <p className="text-lg font-semibold text-center text-string mt-4 mb-4">
                             Próximos Jogos
                         </p>
-                        {team.id && <NextEvents id={team.id} />}
+                        {team.id && <NextEvents id={team.id} size={3} style={classStyle} />}
                         <p className="text-lg font-semibold text-center text-string mt-4 mb-4">
                             Últimas Partidas
                         </p>
-                        {team.id && <LastEvents id={team.id} />}
+                        {team.id && <LastEvents id={team.id} size={3} style={classStyle} />}
                     </div>
                 </div>
             </div>

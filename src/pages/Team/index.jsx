@@ -5,6 +5,7 @@ import React from "react";
 import LastEvents from "../../components/LastEvents";
 import { searchTeams } from "../../data/config";
 import HeaderCommon from "../../components/HeaderCommon";
+import CardInfo from "../../components/CardInfo";
 
 const Team = () => {
   const [teamName, setTeamName] = useState("");
@@ -92,32 +93,40 @@ const Team = () => {
           <p className="text-lg font-semibold text-center text-string mt-4 mb-2">
             Informações
           </p>
-          <div className="text-string text-base py-2 px-4 flex flex-col justify-center md:flex-row md:justify-around mditems-center md:text-lg">
-            <div>
-              <p>{`Nome: ${teamName} ${teamShortName ? "(" + teamShortName + ")" : ""
-                }`}</p>
-              <p>{`Ano de Formação: ${teamYear ? teamYear : "Sem dados"}`}</p>
-              <p>{`País: ${teamCountry ? teamCountry : "Sem dados"}`}</p>
-              <p>{`Estádio: ${teamStadium ? teamStadium : "Sem dados"}`}</p>
-              <p>{`Localização: ${teamLocation ? teamLocation : "Sem dados"
-                }`}</p>
+          <div className="text-string text-base py-2 px-4 gap-2 flex flex-col justify-center md:flex-row md:justify-around md:items-center md:text-lg h-full">
+            <div className="grid grid-cols-2 gap-2 w-full">
+              <CardInfo title="Nome" text={`${teamName} ${teamShortName ? "(" + teamShortName + ")" : ""
+                }`} />
+              <CardInfo title="Ano de Formação" text={`${teamYear ? teamYear : "Sem dados"}`} />
+              <CardInfo title="Localização" text={`${teamLocation ? teamLocation : "Sem dados"
+                }`} />
+              <CardInfo title="Estádio" text={`${teamStadium ? teamStadium : "Sem dados"}`} />
             </div>
-            <div className="justify-center flex mt-2 md:mt-0">
-              <img
-                src={teamLogo}
-                alt=""
-                className="w-[250px] lg:w-[400px] justify-center"
-              />
+            {teamLogo && (
+              <div className="justify-center flex mt-2 md:mt-0 w-full py-2 px-4 bg-secondary/10 rounded-xl">
+                <p className="text-start text-string_accent font-medium text-xs lg:text-base">Logo:</p>
+                <img
+                  src={teamLogo}
+                  alt=""
+                  className="w-[250px] lg:w-[350px] justify-center"
+                />
+              </div>
+            )}
+          </div>
+          <div className="flex flex-col md:flex-row justify-center">
+            <div className="flex flex-col justify-center w-full">
+              <p className="text-lg font-semibold text-center text-string mt-4 mb-4">
+                Próximo Jogo
+              </p>
+              {id && <NextEvents id={id} size={1} style="" />}
+            </div>
+            <div className="flex flex-col justify-center w-full">
+              <p className="text-lg font-semibold text-center text-string mt-4 mb-4">
+                Última Partida
+              </p>
+              {id && <LastEvents id={id} size={1} style="" />}
             </div>
           </div>
-          <p className="text-lg font-semibold text-center text-string mt-4 mb-4">
-            Próximos Jogos
-          </p>
-          {id && <NextEvents id={id} />}
-          <p className="text-lg font-semibold text-center text-string mt-4 mb-4">
-            Últimas Partidas
-          </p>
-          {id && <LastEvents id={id} />}
         </div>
       </div>
     </div>
