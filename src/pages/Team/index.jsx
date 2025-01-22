@@ -113,7 +113,7 @@ const Team = () => {
               </div>
             )}
           </div>
-          <div className="flex flex-col md:flex-row justify-center">
+          <div className="flex flex-col md:flex-row justify-center mb-10">
             <div className="flex flex-col justify-center w-full">
               <p className="text-lg font-semibold text-center text-string mt-4 mb-4">
                 Próximo Jogo
