@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import leagues from '../../data/leagues.js';
-import { Link } from 'react-router';
 import { listTeamsByLeague } from '../../data/config.js';
 import HeaderCommon from '../../components/HeaderCommon.jsx';
+import TeamFetch from '../../components/TeamFetch.jsx';
 
 const Search = () => {
     const [teams, setTeams] = useState([])
+    const [teamName, setTeamName] = useState(null)
     const params = useParams();
     const search = leagues.find((league) => {
         return league.id == params.id;
@@ -38,7 +39,7 @@ const Search = () => {
                                     key={t.strTeam}
                                     className="flex flex-col bg-primary border-2 border-bgprimary rounded-xl p-2 items-center gap-2 shadow-xs w-[167px] h-[200px] hover:shadow-lg"
                                 >
-                                    <Link to={`/load/${t.strTeam}`}>
+                                    <div onClick={() => setTeamName(t.strTeam)}>
                                         <img
                                             src={t.strBadge}
                                             alt={t.strTeam}
@@ -51,13 +52,14 @@ const Search = () => {
                                         <div className="bg-gray-800 text-string text-center p-2 font-semibold rounded-xl w-full text-sm hover:scale-[103%]">
                                             SELECIONAR
                                         </div>
-                                    </Link>
+                                    </div>
                                 </div>
                             )
                             )}
                     </div>
                 </div>
             </div>
+            {teamName && (<TeamFetch team={teamName} />)}
         </div>
     );
 }

@@ -6,7 +6,6 @@ import {
 import { Home } from "./Home";
 import Search from "./Search";
 import Team from "./Team";
-import Load from "./Load";
 import MyTeam from "./MyTeam";
 import Start from "./Start";
 import NotFound from "./NotFound";
@@ -30,11 +29,6 @@ const router = createBrowserRouter([
     {
         path: "/team/:id/:name",
         element: <Team />,
-    },
-
-    {
-        path: "/load/:id",
-        element: <Load />,
     },
 
     {

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { imageTeam } from "../../data/config";
 import HeaderMyTeam from "../../components/HeaderMyTeam";
 import NextEvents from "../../components/NextEvents";
 import React from "react";

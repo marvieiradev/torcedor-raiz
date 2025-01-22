@@ -6,7 +6,7 @@ import Alert from "./AlertDialog";
 const HeaderCommon = ({ fav, team }) => {
     const navigate = useNavigate();
     const handleNavigate = () => {
-        navigate("/");
+        navigate(-1);
     };
 
     const handleFavorite = () => {

@@ -60,23 +60,23 @@ const NextMatchInfo = ({ results, name }) => {
                         <p className="text-lg font-semibold">Últimos Resultados</p>
                     </div>
                     <div className="flex justify-between bg-black px-4 py-4 items-center w-[100%] rounded-xl">
-                        {results.map((item) =>
+                        {results.map((item, index) =>
                             item == "W" ? (
-                                <div className="flex flex-col justify-center items-center gap-1">
+                                <div className="flex flex-col justify-center items-center gap-1" key={index}>
                                     <div className="text-green-500">
                                         <Triangle strokeWidth={3} />
                                     </div>
                                     <p className="text-xs">Vitória</p>
                                 </div>
                             ) : item == "L" ? (
-                                <div className="flex flex-col justify-center items-center gap-1">
+                                <div className="flex flex-col justify-center items-center gap-1" key={index}>
                                     <div className="text-red-500 rotate-180">
                                         <Triangle strokeWidth={3} />
                                     </div>
                                     <p className="text-xs">Derrota</p>
                                 </div>
                             ) : (
-                                <div className="flex flex-col justify-center items-center gap-1">
+                                <div className="flex flex-col justify-center items-center gap-1" key={index}>
                                     <div className="text-grey-500">
                                         <Circle strokeWidth={3} />
                                     </div>
