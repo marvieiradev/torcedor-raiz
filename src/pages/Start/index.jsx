@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Search } from "lucide-react";
 
 const Start = () => {
-    const id = localStorage.getItem("teamId");
+    const id = localStorage.getItem("team");
     const navigate = useNavigate();
 
     useEffect(() => {

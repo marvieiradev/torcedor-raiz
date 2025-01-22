@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { redirect, useParams } from "react-router";
+import { useParams } from "react-router";
 import { useNavigate } from "react-router";
 import React from "react";
 

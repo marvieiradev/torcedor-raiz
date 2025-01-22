@@ -16,17 +16,11 @@ const MyTeam = () => {
     const [teamColor2, setTeamColor2] = useState("");
     const [teamName, setTeamName] = useState("");
 
-    console.log(team)
     const navigate = useNavigate();
-    const handleNavigate = () => {
-        navigate("/");
-    };
-
-    if (!team.id) {
-        handleNavigate();
-    }
-
     useEffect(() => {
+        if (!team) {
+            navigate("/")
+        }
         const getMyTeam = async () => {
             const data = await fetch(findTeam + team.id);
             data.json().then((json) => {
@@ -50,11 +44,11 @@ const MyTeam = () => {
                             <div className="mb-4 px-4 mx-4 text-string rounded-xl lg:grid lg:grid-2 mt-4 border-2" style={{ backgroundColor: teamColor1, color: teamColor2, borderColor: teamColor2 }}>
                                 <div className="flex items-center justify-around p-2">
                                     <img
-                                        src={imageTeam + team.id + "/image"}
-                                        alt=""
-                                        className="w-[120px]"
+                                        src={team.badge}
+                                        alt={myTeam.name}
+                                        className="w-[110px] lg:w-[125px]"
                                     />
-                                    <h1 className="text-2xl font-semibold text-center">{myTeam.name}</h1>
+                                    <h1 className="text-xl lg:text-2xl font-semibold text-center">{myTeam.name}</h1>
                                 </div>
                             </div>
                             <div className="lg:mb-4 lg:mt-4">

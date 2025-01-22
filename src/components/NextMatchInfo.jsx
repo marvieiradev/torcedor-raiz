@@ -39,7 +39,7 @@ const NextMatchInfo = ({ results, name }) => {
             );
         } else if (teamAvg <= 1.8) {
             setReport(
-                `Na próxima partida, o ${name} pode encerrar a partida com um empate`
+                `Na próxima partida, o ${name} tem uma boa chance de encerrar a partida com um empate`
             );
         } else if (teamAvg <= 2.4) {
             setReport(

@@ -93,6 +93,54 @@ const leagues = [
     name: "Mexican Primera League",
     country: "México",
   },
+
+  {
+    id: 13,
+    title: "J1 League",
+    img: "https://www.thesportsdb.com/images/media/league/badge/3j8bni1675170553.png/small",
+    name: "Japanese J1 League",
+    country: "Japão",
+  },
+
+  {
+    id: 14,
+    title: "Championship",
+    img: "https://www.thesportsdb.com/images/media/league/badge/ty5a681688770169.png/small",
+    name: "English League Championship",
+    country: "Inglaterra",
+  },
+
+  {
+    id: 15,
+    title: "Ligue 2",
+    img: "https://www.thesportsdb.com/images/media/league/badge/j7nbg91719637466.png/small",
+    name: "French Ligue 2",
+    country: "França",
+  },
+
+  {
+    id: 16,
+    title: "Bundesliga 2",
+    img: "https://www.thesportsdb.com/images/media/league/badge/hl40981534764789.png/small",
+    name: "German 2. Bundesliga",
+    country: "Alemanha",
+  },
+
+  {
+    id: 17,
+    title: "Série B",
+    img: "https://www.thesportsdb.com/images/media/league/badge/uf5kph1598011132.png/small",
+    name: "Italian Serie B",
+    country: "Itália",
+  },
+
+  {
+    id: 18,
+    title: "La Liga 2",
+    img: "https://www.thesportsdb.com/images/media/league/badge/r7u6821688425700.png/small",
+    name: "Spanish La Liga 2",
+    country: "Espanha",
+  },
 ];
 
 export default leagues;

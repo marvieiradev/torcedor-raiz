@@ -53,7 +53,7 @@ const Team = () => {
     setTeamColor2("#000");
   }
 
-  var team = { id: id, color1: teamColor1, color2: teamColor2 }
+  var team = { id: id, color1: teamColor1, color2: teamColor2, badge: teamBadge }
 
   return (
     <div className="container">
