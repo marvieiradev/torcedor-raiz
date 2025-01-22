@@ -1,16 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Heart } from "lucide-react";
 import Header from "./Header";
+import Alert from "./AlertDialog";
 
 const HeaderCommon = ({ fav, team }) => {
     const navigate = useNavigate();
     const handleNavigate = () => {
-        navigate("/myteam");
+        navigate("/");
     };
 
     const handleFavorite = () => {
         var saveTeam = JSON.stringify(team);
-        console.log(saveTeam)
         localStorage.setItem("team", saveTeam);
         navigate("/myteam");
     };
@@ -28,15 +28,17 @@ const HeaderCommon = ({ fav, team }) => {
                 <div className="justify-center">
                     <img src="/logo.svg" alt="Torcedor Raiz" className="h-[22px]" />
                 </div>
-                <div
-                    className="flex flex-col justify-center items-center cursor-pointer text-string min-w-[20px]"
-                    onClick={handleFavorite}
-                >
-                    <div className={fav}>
-                        <Heart />
-                        <p className="text-xs">Salvar</p>
+
+                <Alert action={handleFavorite} message={"Deseja adicionar esse time como favorito?"}>
+                    <div
+                        className="flex flex-col justify-center items-center cursor-pointer text-string min-w-[20px]"
+                    >
+                        <div className={fav}>
+                            <Heart />
+                            <p className="text-xs">Salvar</p>
+                        </div>
                     </div>
-                </div>
+                </Alert>
             </Header>
         </>
     );
