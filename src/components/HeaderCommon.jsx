@@ -10,8 +10,10 @@ const HeaderCommon = ({ fav, team }) => {
     };
 
     const handleFavorite = () => {
-        var saveTeam = JSON.stringify(team);
+        var itens = JSON.parse(sessionStorage.getItem("itens"));
+        var saveTeam = JSON.stringify({ id: team, color1: itens.color1, color2: itens.color2, badge: itens.badge });
         localStorage.setItem("team", saveTeam);
+        sessionStorage.clear()
         navigate("/myteam");
     };
 

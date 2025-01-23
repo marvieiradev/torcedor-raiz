@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     },
 
     {
-        path: "/team/:id/:name",
+        path: "/team/:name",
         element: <Team />,
     },
 
