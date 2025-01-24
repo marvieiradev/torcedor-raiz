@@ -44,7 +44,7 @@ const MyTeam = () => {
                             <div className="mb-4 px-4 mx-4 text-string rounded-xl lg:grid lg:grid-2 mt-4 border-2" style={{ backgroundColor: teamColor1, color: teamColor2, borderColor: teamColor2 }}>
                                 <div className="flex items-center justify-around p-2">
                                     <img
-                                        src={team.badge}
+                                        src={team.badge ? team.badge : "/no-badge.webp"}
                                         alt={myTeam.name}
                                         className="w-[110px] lg:w-[125px]"
                                     />

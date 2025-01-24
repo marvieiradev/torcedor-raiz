@@ -16,7 +16,7 @@ export function Home() {
                             leagues.map((l) => (
                                 <div
                                     key={l.name}
-                                    className="flex flex-col bg-primary border-2 border-bgprimary rounded-xl p-2 items-center gap-2 shadow-xs w-[165px] h-[155px] hover:shadow-lg place-items-center relative lg:mb-4 cursor-pointer hover:scale-[103%]"
+                                    className="animscale flex flex-col bg-primary border-2 border-bgprimary rounded-xl p-2 items-center gap-2 shadow-xs w-[165px] h-[155px] hover:shadow-lg place-items-center relative lg:mb-4 cursor-pointer hover:scale-[103%] ease-in-out"
                                 >
                                     <Link to={`/search/${l.id}`}>
                                         <img src={l.img}

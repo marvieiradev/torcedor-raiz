@@ -33,7 +33,7 @@ const Start = () => {
                             Com base nas partidas anteriores, o Torcedor Raiz tenta prever o resultado do próximo jogo do seu time.
                         </p>
                     </div>
-                    <p className="font-semibold text-center text-base md:text-lg lg:text-xl">Instruções:</p>
+                    <p className="font-semibold text-center text-base md:text-lg lg:text-xl animblur">Instruções:</p>
                     <div className="flex flex-col gap-2 lg:flex-row">
                         <div className="flex bg-primary justify-center items-start rounded-xl gap-2 p-2">
                             <div className="flex p-1 justify-start bg-card rounded-xl items-center">
@@ -49,7 +49,7 @@ const Start = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-card text-string flex px-4 py-2 rounded-xl mt-6 gap-4 md:text-lg cursor-pointer justify-center items-center" onClick={hasStart}>
+                <div className="bg-card text-string flex px-4 py-2 rounded-xl mt-6 gap-4 md:text-lg cursor-pointer justify-center items-center hover:scale[103%] ease-in-out" onClick={hasStart}>
                     <Search />
                     Pesquisar
                 </div>
