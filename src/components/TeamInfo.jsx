@@ -36,18 +36,14 @@ const TeamInfo = (name) => {
                 })
                 .catch(() => navigate("/error"));
         };
-        if (!teamColor1) {
-            setTeamColor1("#fff");
-        }
-
-        if (!teamColor2) {
-            setTeamColor2("#000");
-        }
         fetchData();
     }, []);
 
+    if (!teamColor1) setTeamColor1("#fff");
+    if (!teamColor2) setTeamColor2("#000");
+
     if (teamName && name) {
-        var itens = { color1: teamColor1, color2: teamColor2, badge: teamBadge }
+        var itens = { color1: teamColor1, color2: teamColor2, badge: teamBadge };
         sessionStorage.setItem("itens", JSON.stringify(itens));
     }
 
@@ -63,8 +59,12 @@ const TeamInfo = (name) => {
             </div>
 
             <div className="bg-team">
-                <div className="flex m-auto items-center justify-between px-6 pb-2 pt-2 max-w-[800px]">
-                    <img src={teamBadge} className="w-[150px] p-1" alt="" />
+                <div className="flex m-auto items-center justify-between px-6 pb-2 pt-2 max-w-[800px] animblur">
+                    {teamBadge ? (
+                        <img src={teamBadge} className="w-[150px] p-1" alt="" />
+                    ) : (
+                        <img src="/no-badge.webp" className="w-[150px] p-1" alt="" />
+                    )}
 
                     {teamEquipment ? (
                         <div>
@@ -77,7 +77,7 @@ const TeamInfo = (name) => {
                                 src={teamBadge}
                                 alt=""
                             />
-                            <img src="/no-equip.png" className="w-[150px]" alt="" />
+                            <img src="/no-equip.webp" className="w-[150px]" alt="" />
                         </div>
                     )}
                 </div>
@@ -87,16 +87,29 @@ const TeamInfo = (name) => {
             </p>
             <div className="text-string text-base py-2 px-4 gap-2 flex flex-col justify-center md:flex-row md:justify-around md:items-center md:text-lg h-full">
                 <div className="grid grid-cols-2 gap-2 w-full">
-                    <CardInfo title="Nome" text={`${teamName} ${teamShortName ? "(" + teamShortName + ")" : ""
-                        }`} />
-                    <CardInfo title="Ano de Formação" text={`${teamYear ? teamYear : "Sem dados"}`} />
-                    <CardInfo title="Localização" text={`${teamLocation ? teamLocation : "Sem dados"
-                        }`} />
-                    <CardInfo title="Estádio" text={`${teamStadium ? teamStadium : "Sem dados"}`} />
+                    <CardInfo
+                        title="Nome"
+                        text={`${teamName} ${teamShortName ? "(" + teamShortName + ")" : ""
+                            }`}
+                    />
+                    <CardInfo
+                        title="Ano de Formação"
+                        text={`${teamYear ? teamYear : "Sem dados"}`}
+                    />
+                    <CardInfo
+                        title="Localização"
+                        text={`${teamLocation ? teamLocation : "Sem dados"}`}
+                    />
+                    <CardInfo
+                        title="Estádio"
+                        text={`${teamStadium ? teamStadium : "Sem dados"}`}
+                    />
                 </div>
                 {teamLogo && (
                     <div className="justify-center flex mt-2 md:mt-0 w-full py-2 px-4 bg-secondary/10 rounded-xl">
-                        <p className="text-start text-string_accent font-medium text-xs lg:text-base">Logo:</p>
+                        <p className="text-start text-string_accent font-medium text-xs lg:text-base">
+                            Logo:
+                        </p>
                         <img
                             src={teamLogo}
                             alt=""
@@ -107,6 +120,6 @@ const TeamInfo = (name) => {
             </div>
         </>
     );
-}
+};
 
 export default TeamInfo;
