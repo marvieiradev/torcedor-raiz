@@ -33,13 +33,17 @@ const NextMatchInfo = ({ results, name }) => {
     });
 
     const teamReport = () => {
-        if (teamAvg <= 1.0) {
+        if (teamAvg <= 0.7) {
             setReport(
                 `Na próxima partida, o ${name} tem chances de perder para o seu adversário`
             );
-        } else if (teamAvg <= 1.8) {
+        } else if (teamAvg <= 1.0) {
             setReport(
                 `Na próxima partida, o ${name} tem uma boa chance de encerrar a partida com um empate`
+            );
+        } else if (teamAvg <= 1.8) {
+            setReport(
+                `Na próxima partida, o ${name} tem chance de encerrar a partida com um empate, embora uma vitória seja possível`
             );
         } else if (teamAvg <= 2.4) {
             setReport(
