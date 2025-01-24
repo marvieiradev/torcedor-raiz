@@ -1,6 +1,9 @@
 # Torcedor Raiz
 
+<<<<<<< HEAD
 Logo:
+=======
+>>>>>>> 67418f60e273b5e83e4ffddf6f567c6900dc947d
 <img src="https://github.com/marvieiradev/torcedor-raiz/blob/master/public/logo.svg"/>
 
 ## Sobre o projeto
