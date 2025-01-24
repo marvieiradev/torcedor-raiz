@@ -37,7 +37,7 @@ const Search = () => {
                                     key={t.strTeam}
                                     className="flex flex-col bg-primary border-2 border-bgprimary rounded-xl p-2 items-center gap-2 shadow-xs w-[167px] h-[200px] hover:shadow-lg cursor-pointer hover:scale-[103%]"
                                 >
-                                    <Link to={`/team/${t.strTeam}`}>
+                                    <Link to={`/team/${t.strTeam.replace(" ", "_")}`}>
                                         <img
                                             src={t.strBadge}
                                             alt={t.strTeam}

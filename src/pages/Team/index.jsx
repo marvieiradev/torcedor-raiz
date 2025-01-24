@@ -3,9 +3,7 @@ import { useParams } from "react-router";
 import NextEvents from "../../components/NextEvents";
 import React from "react";
 import LastEvents from "../../components/LastEvents";
-import { searchTeams } from "../../data/config";
 import HeaderCommon from "../../components/HeaderCommon";
-import CardInfo from "../../components/CardInfo";
 import { useNavigate } from "react-router";
 import TeamInfo from "../../components/TeamInfo";
 import { findTeamByName } from "../../data/config";
@@ -13,8 +11,7 @@ import { findTeamByName } from "../../data/config";
 const Team = () => {
   const [teamId, setTeamId] = useState(null);
   const params = useParams();
-  const id = params.id;
-  const name = params.name;
+  const name = params.name.replace("_", " ");
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -25,7 +22,7 @@ const Team = () => {
         .then((json) => {
           setTeamId(json.results[0].entity.id);
         })
-        .catch((error) => console.log(error));
+        .catch(() => navigate("/error"));
     };
     getSchedule();
 
