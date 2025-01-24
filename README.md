@@ -1,6 +1,7 @@
 # Torcedor Raiz
 
-<img src="torcedor-raiz/public/logo.svg"/>
+Logo:
+<img src="https://github.com/marvieiradev/torcedor-raiz/blob/master/public/logo.svg"/>
 
 ## Sobre o projeto
 
