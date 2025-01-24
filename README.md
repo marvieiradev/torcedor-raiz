@@ -1,6 +1,6 @@
 # Torcedor Raiz
 
-<img src="/logo.svg"/>
+<img src="torcedor-raiz/public/logo.svg"/>
 
 ## Sobre o projeto
 
