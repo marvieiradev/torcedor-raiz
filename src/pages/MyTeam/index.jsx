@@ -14,6 +14,7 @@ const MyTeam = () => {
     const [teamColor1, setTeamColor1] = useState("");
     const [teamColor2, setTeamColor2] = useState("");
     const [teamName, setTeamName] = useState("");
+    const [tournament, setTournament] = useState("")
     const classStyle = "md:grid md:grid-cols-2 lg:grid-cols-3"
 
     const navigate = useNavigate();
@@ -29,6 +30,7 @@ const MyTeam = () => {
                 setTeamColor1(team.color1);
                 setTeamColor2(team.color2);
                 setTeamName(json.team.name)
+                setTournament(json.team.primaryUniqueTournament.name)
             });
         };
         getMyTeam();
@@ -52,7 +54,7 @@ const MyTeam = () => {
                                 </div>
                             </div>
                             <div className="lg:mb-4 lg:mt-4">
-                                <NextMatchInfo results={lastResults} name={teamName} />
+                                <NextMatchInfo results={lastResults} name={teamName} tournament={tournament} />
                             </div>
                         </div>
 

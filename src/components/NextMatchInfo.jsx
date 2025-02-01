@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Circle, Triangle } from "lucide-react";
 
-const NextMatchInfo = ({ results, name }) => {
+const NextMatchInfo = ({ results, name, tournament }) => {
     const [teamAvg, setTeamAvg] = useState(0);
     const [win, setWin] = useState(0);
     const [draw, setDraw] = useState(0);
@@ -33,7 +33,7 @@ const NextMatchInfo = ({ results, name }) => {
     });
 
     const teamReport = () => {
-        if (teamAvg <= 0.7) {
+        if (teamAvg <= 0.6) {
             setReport(
                 `Na próxima partida, o ${name} tem chances de perder para o seu adversário`
             );
@@ -63,7 +63,7 @@ const NextMatchInfo = ({ results, name }) => {
                     <div className="flex gap-2 justify-center p-1">
                         <p className="text-lg font-semibold">Últimos Resultados</p>
                     </div>
-                    <div className="flex justify-between bg-black px-4 py-4 items-center w-[100%] rounded-xl">
+                    <div className="flex justify-evenly bg-black px-4 py-4 items-center w-[100%] rounded-xl">
                         {results.map((item, index) =>
                             item == "W" ? (
                                 <div className="flex flex-col justify-center items-center gap-1" key={index}>
@@ -106,6 +106,7 @@ const NextMatchInfo = ({ results, name }) => {
                     {results.length >= 5 && (
                         <p className="text-string_accent font-semibold text-center text-sm lg:text-base">{report}</p>
                     )}
+                    <p className="text-string text-center text-xs lg:text-sm mt-2">*Os resultados são mostrados de acordo com o torneio atual: <span className="font-semibold text-string_accent">{tournament}</span></p>
                 </div>
             </div>
         </>
